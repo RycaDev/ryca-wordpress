@@ -20,7 +20,7 @@ services:
 
   wp:
     container_name: wp
-    image: wordpress:latest
+    image: wordpress_local:wp_custom_1.0
     depends_on:
       - wp_db
     volumes:
@@ -38,7 +38,7 @@ services:
   
   phpmyadmin:
     container_name: phpmyadmin
-    image: phpmyadmin/phpmyadmin:latest
+    image: phpmyadmin_local:phymyadmin_custom_1.0
     depends_on:
       - wp_db
     restart: unless-stopped
